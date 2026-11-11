@@ -63,6 +63,13 @@ export default function HomePage() {
         {/* 3 Pillars Grid Section — High-End Architectural Gallery */}
         <section className="py-16 sm:py-24 lg:py-28 bg-[#FAFAFA] border-t border-b border-neutral-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
+              <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl text-neutral-900 font-normal">
+                The Destinations
+              </h2>
+              <div className="w-12 h-px bg-neutral-300 mx-auto mt-4" />
+            </div>
+
             <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
               {/* Encore Card */}
               <div className="group bg-white border border-neutral-200/90 rounded-sm overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-500">
