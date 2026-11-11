@@ -174,17 +174,32 @@ export default function RestroCafePage() {
             {/* Left 5 cols: Details & CTAs */}
             <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
               <div className="space-y-5">
-                <div className="space-y-2">
-                  <span className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-[0.25em] text-neutral-500 font-medium bg-neutral-100 px-3 py-1 rounded-full">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
-                    <span>Vyttila Hub • Kochi</span>
-                  </span>
+                <div className="space-y-2.5">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <span className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-[0.25em] text-neutral-500 font-medium bg-neutral-100 px-3 py-1 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
+                      <span>Vyttila Hub • Kochi</span>
+                    </span>
+                    <span className="inline-flex items-center space-x-1.5 text-[10px] sm:text-[11px] font-medium text-emerald-800 bg-emerald-50/90 border border-emerald-200/70 px-3 py-1 rounded-full shadow-2xs">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      <span>Open Tonight until 3:00 AM</span>
+                    </span>
+                  </div>
+
                   <h3 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
                     District 7 Restro Cafe
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
                     Iconic Steaks, Tableside Sizzlers, Gourmet Burgers &amp; Thickshakes
                   </p>
+
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {['Legendary Steaks', 'Tableside Sizzlers', 'Gourmet Burgers', 'Thickshakes'].map((tag) => (
+                      <span key={tag} className="text-[10px] sm:text-[11px] font-medium text-neutral-700 bg-neutral-100 border border-neutral-200/60 px-2.5 py-1 rounded-md">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="bg-neutral-50/80 border border-neutral-200/70 rounded-2xl p-4 sm:p-5 space-y-4 text-xs sm:text-sm text-neutral-600 font-light">
@@ -195,6 +210,7 @@ export default function RestroCafePage() {
                     <div className="space-y-0.5 min-w-0">
                       <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">Address</span>
                       <span className="leading-relaxed block">Near Mobility Hub, Vyttila, Ernakulam, Kochi, Kerala 682019</span>
+                      <span className="text-[11px] text-neutral-500 block pt-0.5">Adjacent to Vyttila Mobility Hub &amp; Metro</span>
                     </div>
                   </div>
 
@@ -250,9 +266,9 @@ export default function RestroCafePage() {
               <div className="relative w-full flex-1 min-h-[380px] sm:min-h-[440px] rounded-2xl overflow-hidden border border-neutral-200/90 shadow-sm bg-neutral-100 group">
                 {/* Floating Glassmorphic Pill */}
                 <div className="absolute top-4 left-4 z-10 pointer-events-none">
-                  <span className="inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[11px] font-medium text-neutral-800 shadow-sm border border-neutral-200/80">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>Interactive Map • Vyttila</span>
+                  <span className="inline-flex items-center space-x-1.5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[10px] sm:text-[11px] font-medium text-neutral-800 shadow-sm border border-neutral-200/80">
+                    <MapPin className="w-3 h-3 text-neutral-900" />
+                    <span>Adjacent to Vyttila Mobility Hub &amp; Metro</span>
                   </span>
                 </div>
 
