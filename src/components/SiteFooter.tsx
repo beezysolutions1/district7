@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, ArrowUpRight, Instagram } from 'lucide-react';
+import { Phone, MapPin, Clock, ArrowUpRight, Instagram } from 'lucide-react';
 
 export default function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -144,11 +144,6 @@ export default function SiteFooter() {
               <div>
                 <a href="tel:+917736030777" className="text-white hover:text-neutral-300 transition-colors font-medium">
                   +91 7736 030 777
-                </a>
-              </div>
-              <div>
-                <a href="mailto:encore@d7ventures.com" className="text-neutral-400 hover:text-white transition-colors">
-                  encore@d7ventures.com
                 </a>
               </div>
               <div className="pt-1">
