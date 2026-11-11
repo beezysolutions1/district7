@@ -85,7 +85,7 @@ export default function DinerReviewsMarquee() {
             ))}
           </div>
           <span className="text-xs uppercase tracking-wider text-neutral-600 font-medium font-mono">
-            4.9 / 5.0 • 1,500+ Verified Diners
+            4.6 / 5.0 • 1,500+ Verified Diners
           </span>
         </div>
       </div>
