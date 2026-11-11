@@ -94,46 +94,72 @@ export default function LuxuryVisitSection() {
 
         {/* Active Location Display Card */}
         <div className="bg-white border border-neutral-200/90 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-sm">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left Column: Details & CTAs */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="space-y-2">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-neutral-400 font-medium block">
-                  {activeTab === 'kadavanthra' ? 'Kadavanthra, Kochi' : 'Vyttila, Kochi'}
-                </span>
-                <h3 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
-                  {loc.hubTitle}
-                </h3>
-                <p className="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
-                  {loc.venues}
-                </p>
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            {/* Left Column: Details & CTAs (Flushed and Aligned from Top to Bottom) */}
+            <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+              <div className="space-y-5">
+                <div className="space-y-2">
+                  <span className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-[0.25em] text-neutral-500 font-medium bg-neutral-100 px-3 py-1 rounded-full">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
+                    <span>{activeTab === 'kadavanthra' ? 'Kadavanthra Hub • Kochi' : 'Vyttila Hub • Kochi'}</span>
+                  </span>
+                  <h3 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
+                    {loc.hubTitle}
+                  </h3>
+                  <p className="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
+                    {loc.venues}
+                  </p>
+                </div>
+
+                {/* Structured Architectural Info Card */}
+                <div className="bg-neutral-50/80 border border-neutral-200/70 rounded-2xl p-4 sm:p-5 space-y-4 text-xs sm:text-sm text-neutral-600 font-light">
+                  <div className="flex items-start space-x-3.5">
+                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+                      <MapPin className="w-4 h-4 text-neutral-900" />
+                    </div>
+                    <div className="space-y-0.5 min-w-0">
+                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">
+                        Location
+                      </span>
+                      <span className="leading-relaxed block">{loc.address}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3.5 pt-3 border-t border-neutral-200/60">
+                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+                      <Clock className="w-4 h-4 text-neutral-900" />
+                    </div>
+                    <div className="space-y-0.5 min-w-0">
+                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">
+                        Dining Hours
+                      </span>
+                      <span className="leading-relaxed block">{loc.hours}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3.5 pt-3 border-t border-neutral-200/60">
+                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+                      <Phone className="w-4 h-4 text-neutral-900" />
+                    </div>
+                    <div className="space-y-0.5 min-w-0">
+                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">
+                        Direct Line
+                      </span>
+                      <a href={`tel:${loc.phone}`} className="hover:text-black transition-colors font-medium text-neutral-900 block">
+                        {loc.phone}
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* Address & Hours Box */}
-              <div className="space-y-3.5 pt-2 border-t border-neutral-100 text-xs sm:text-sm text-neutral-600 font-light">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-4 h-4 text-neutral-800 shrink-0 mt-0.5" />
-                  <span>{loc.address}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Clock className="w-4 h-4 text-neutral-800 shrink-0" />
-                  <span>{loc.hours}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-neutral-800 shrink-0" />
-                  <a href={`tel:${loc.phone}`} className="hover:text-neutral-900 transition-colors font-medium">
-                    {loc.phone}
-                  </a>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="pt-2 flex flex-col sm:flex-row gap-3">
+              {/* Symmetrical Dual Action Buttons */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <a
                   href={loc.directionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center space-x-2 border border-neutral-300 bg-white hover:bg-neutral-50 text-neutral-900 px-6 py-3.5 rounded-full text-xs font-medium tracking-wide transition-colors shadow-xs"
+                  className="w-full inline-flex items-center justify-center space-x-2 border border-neutral-300 bg-white hover:bg-neutral-50 hover:border-neutral-900 text-neutral-900 px-4 py-3.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-2xs"
                 >
                   <Navigation className="w-3.5 h-3.5 text-neutral-700" />
                   <span>Get Directions</span>
@@ -144,7 +170,7 @@ export default function LuxuryVisitSection() {
                   href={`https://wa.me/917736030777?text=${encodeURIComponent(loc.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center space-x-2 bg-neutral-950 text-white hover:bg-neutral-800 px-6 py-3.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-sm"
+                  className="w-full inline-flex items-center justify-center space-x-2 bg-neutral-950 text-white hover:bg-neutral-800 px-4 py-3.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-sm"
                 >
                   <span>Book on WhatsApp</span>
                   <ArrowUpRight className="w-3 h-3 text-neutral-400" />
@@ -152,9 +178,31 @@ export default function LuxuryVisitSection() {
               </div>
             </div>
 
-            {/* Right Column: Google Maps Embed */}
-            <div className="lg:col-span-7">
-              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden border border-neutral-200/90 shadow-sm bg-neutral-100">
+            {/* Right Column: Perfectly Aligned Google Maps Canvas */}
+            <div className="lg:col-span-7 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[380px] sm:min-h-[440px] rounded-2xl overflow-hidden border border-neutral-200/90 shadow-sm bg-neutral-100 group">
+                {/* Floating Glassmorphic Pill: Live Status */}
+                <div className="absolute top-4 left-4 z-10 pointer-events-none">
+                  <span className="inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[11px] font-medium text-neutral-800 shadow-sm border border-neutral-200/80">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Interactive Map • {activeTab === 'kadavanthra' ? 'Kadavanthra' : 'Vyttila'}</span>
+                  </span>
+                </div>
+
+                {/* Floating Quick Action: Open Full Map */}
+                <div className="absolute bottom-4 right-4 z-10">
+                  <a
+                    href={loc.directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1.5 bg-neutral-900/90 hover:bg-neutral-950 text-white backdrop-blur-md px-3.5 py-2 rounded-full text-[11px] font-medium transition-all shadow-md hover:scale-[1.02]"
+                  >
+                    <Navigation className="w-3 h-3 text-emerald-400" />
+                    <span>Open Full Map</span>
+                    <ArrowUpRight className="w-3 h-3 text-neutral-400" />
+                  </a>
+                </div>
+
                 <iframe
                   key={loc.id}
                   src={loc.mapEmbedUrl}
@@ -165,7 +213,7 @@ export default function LuxuryVisitSection() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full"
+                  className="absolute inset-0 w-full h-full grayscale-[25%] group-hover:grayscale-0 transition-all duration-700 ease-in-out"
                 />
               </div>
             </div>

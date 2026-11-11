@@ -3,7 +3,7 @@ import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import EditorialGallery from '../../components/EditorialGallery';
 import RestroCafeMenu from '../../components/RestroCafeMenu';
-import { Download, ArrowDown, MapPin, Clock, Phone, Navigation } from 'lucide-react';
+import { Download, ArrowDown, MapPin, Clock, Phone, Navigation, ArrowUpRight } from 'lucide-react';
 
 export const metadata = {
   title: 'Restro Cafe - d7ventures.com',
@@ -170,81 +170,116 @@ export default function RestroCafePage() {
             <div className="w-12 h-px bg-neutral-300 mx-auto mt-4" />
           </div>
 
-          <div className="bg-white border border-neutral-200/80 rounded-2xl p-6 sm:p-10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left 5 cols: Details */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="space-y-2">
-                <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full inline-block">
-                  Vyttila Hub
-                </span>
-                <h3 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
-                  District 7 Restro Cafe
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-500 font-light">
-                  Iconic Steaks, Tableside Sizzlers, Gourmet Burgers &amp; Thickshakes
-                </p>
+          <div className="bg-white border border-neutral-200/90 rounded-3xl p-6 sm:p-10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            {/* Left 5 cols: Details & CTAs */}
+            <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+              <div className="space-y-5">
+                <div className="space-y-2">
+                  <span className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-[0.25em] text-neutral-500 font-medium bg-neutral-100 px-3 py-1 rounded-full">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
+                    <span>Vyttila Hub • Kochi</span>
+                  </span>
+                  <h3 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
+                    District 7 Restro Cafe
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
+                    Iconic Steaks, Tableside Sizzlers, Gourmet Burgers &amp; Thickshakes
+                  </p>
+                </div>
+
+                <div className="bg-neutral-50/80 border border-neutral-200/70 rounded-2xl p-4 sm:p-5 space-y-4 text-xs sm:text-sm text-neutral-600 font-light">
+                  <div className="flex items-start space-x-3.5">
+                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+                      <MapPin className="w-4 h-4 text-neutral-900" />
+                    </div>
+                    <div className="space-y-0.5 min-w-0">
+                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">Address</span>
+                      <span className="leading-relaxed block">Near Mobility Hub, Vyttila, Ernakulam, Kochi, Kerala 682019</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3.5 pt-3 border-t border-neutral-200/60">
+                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+                      <Clock className="w-4 h-4 text-neutral-900" />
+                    </div>
+                    <div className="space-y-0.5 min-w-0">
+                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">Dining Hours</span>
+                      <span className="leading-relaxed block">Open Daily: 12:00 PM – 3:00 AM (Late Night)</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3.5 pt-3 border-t border-neutral-200/60">
+                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+                      <Phone className="w-4 h-4 text-neutral-900" />
+                    </div>
+                    <div className="space-y-0.5 min-w-0">
+                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">Direct Concierge</span>
+                      <a href="tel:+917736030777" className="hover:text-black transition-colors font-medium text-neutral-900 block">
+                        +91 7736 030 777
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-3.5 text-xs sm:text-sm text-neutral-700 font-light pt-2 border-t border-neutral-100">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-4 h-4 text-neutral-900 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-medium text-neutral-900 block">Address</span>
-                    <span>Near Mobility Hub, Vyttila, Ernakulam, Kochi, Kerala 682019</span>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <Clock className="w-4 h-4 text-neutral-900 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-medium text-neutral-900 block">Dining Hours</span>
-                    <span>Open Daily: 12:00 PM – 3:00 AM (Late Night)</span>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <Phone className="w-4 h-4 text-neutral-900 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-medium text-neutral-900 block">Direct Concierge</span>
-                    <a href="tel:+917736030777" className="hover:text-black transition-colors font-medium">
-                      +91 7736 030 777
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-2 flex flex-col sm:flex-row gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <a
                   href="https://maps.google.com/?q=District+7+Restro+Cafe+Vyttila+Kochi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-full sm:w-auto inline-flex items-center justify-center space-x-2 text-xs py-3 px-5"
+                  className="w-full inline-flex items-center justify-center space-x-2 border border-neutral-300 bg-white hover:bg-neutral-50 hover:border-neutral-900 text-neutral-900 px-4 py-3.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-2xs"
                 >
-                  <Navigation className="w-3.5 h-3.5" />
+                  <Navigation className="w-3.5 h-3.5 text-neutral-700" />
                   <span>Get Directions</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-400" />
                 </a>
                 <a
                   href="https://wa.me/917736030777?text=Hi%20District%207%20Restro%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Vyttila."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 border border-neutral-300 hover:border-neutral-900 text-neutral-900 px-5 py-3 rounded-full text-xs font-medium tracking-[0.08em] transition-colors"
+                  className="w-full inline-flex items-center justify-center space-x-2 bg-neutral-950 text-white hover:bg-neutral-800 px-4 py-3.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-sm"
                 >
-                  <span>Message on WhatsApp</span>
+                  <span>Book on WhatsApp</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-400" />
                 </a>
               </div>
             </div>
 
             {/* Right 7 cols: Interactive Google Map */}
-            <div className="lg:col-span-7">
-              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-neutral-200 shadow-inner bg-neutral-100">
+            <div className="lg:col-span-7 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[380px] sm:min-h-[440px] rounded-2xl overflow-hidden border border-neutral-200/90 shadow-sm bg-neutral-100 group">
+                {/* Floating Glassmorphic Pill */}
+                <div className="absolute top-4 left-4 z-10 pointer-events-none">
+                  <span className="inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[11px] font-medium text-neutral-800 shadow-sm border border-neutral-200/80">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Interactive Map • Vyttila</span>
+                  </span>
+                </div>
+
+                {/* Floating Quick Action */}
+                <div className="absolute bottom-4 right-4 z-10">
+                  <a
+                    href="https://maps.google.com/?q=District+7+Restro+Cafe+Vyttila+Kochi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1.5 bg-neutral-900/90 hover:bg-neutral-950 text-white backdrop-blur-md px-3.5 py-2 rounded-full text-[11px] font-medium transition-all shadow-md hover:scale-[1.02]"
+                  >
+                    <Navigation className="w-3 h-3 text-emerald-400" />
+                    <span>Open Full Map</span>
+                    <ArrowUpRight className="w-3 h-3 text-neutral-400" />
+                  </a>
+                </div>
+
                 <iframe
                   title="District 7 Restro Cafe Vyttila Google Map"
                   src="https://maps.google.com/maps?q=District%207%20Restro%20Cafe%20Vyttila%20Kochi&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
-                  className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
-                  loading="lazy"
+                  style={{ border: 0 }}
                   allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 w-full h-full grayscale-[25%] group-hover:grayscale-0 transition-all duration-700 ease-in-out"
                 />
               </div>
             </div>
