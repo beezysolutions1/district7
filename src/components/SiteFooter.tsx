@@ -128,15 +128,37 @@ export default function SiteFooter() {
                 Ozone Greens, Jawahar Nagar, Kadavanthra, Kochi 682020
               </p>
               <p className="text-neutral-400 font-light">Open Daily: 12:00 PM – 2:00 AM</p>
+              <div className="pt-0.5">
+                <a
+                  href="https://maps.google.com/?q=District+7+Encore+Kadavanthra+Kochi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 hover:text-white transition-colors inline-flex items-center space-x-1"
+                >
+                  <span>Get Directions</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-500" />
+                </a>
+              </div>
             </div>
 
             {/* Vyttila */}
-            <div className="space-y-1 text-xs pt-1">
+            <div className="space-y-1 text-xs pt-2">
               <p className="text-white font-medium">Vyttila Hub (Restro Cafe)</p>
               <p className="text-neutral-400 font-light">
-                Vyttila, Ernakulam, Kochi 682019
+                Near Mobility Hub, Vyttila, Ernakulam, Kochi 682019
               </p>
               <p className="text-neutral-400 font-light">Open Daily: 12:00 PM – 3:00 AM</p>
+              <div className="pt-0.5">
+                <a
+                  href="https://maps.google.com/?q=District+7+Restro+Cafe+Vyttila+Kochi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 hover:text-white transition-colors inline-flex items-center space-x-1"
+                >
+                  <span>Get Directions</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-500" />
+                </a>
+              </div>
             </div>
 
             {/* Direct Contacts */}

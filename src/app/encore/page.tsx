@@ -3,7 +3,7 @@ import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import EditorialGallery from '../../components/EditorialGallery';
 import EncoreMenu from '../../components/EncoreMenu';
-import { Download, ArrowDown } from 'lucide-react';
+import { Download, ArrowDown, MapPin, Clock, Phone, Navigation } from 'lucide-react';
 
 export const metadata = {
   title: 'Open Late Night, Steaks in Kochi, Restaurant in Kochi - d7ventures.com - Ernakulam, Kerala',
@@ -225,36 +225,96 @@ export default function EncorePage() {
           </div>
         </section>
 
-        {/* Contact Us Section */}
-        <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-3">
+        {/* Contact & Google Maps Section */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-10">
+          <div className="text-center space-y-3">
             <span className="text-[11px] uppercase tracking-[0.3em] font-semibold text-neutral-400 block">
               Reservations &amp; Location
             </span>
             <h2 className="font-playfair text-3xl sm:text-5xl text-neutral-900 font-normal">
-              Contact Us
+              Visit District 7 Encore
             </h2>
             <div className="w-12 h-px bg-neutral-300 mx-auto mt-4" />
           </div>
 
-          <div className="space-y-3 max-w-2xl mx-auto">
-            <h3 className="font-playfair text-xl sm:text-2xl text-neutral-800 font-normal">
-              Better yet, see us in person!
-            </h3>
-            <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
-              We love our customers, so feel free to visit anytime during normal business hours.
-            </p>
-          </div>
+          <div className="bg-white border border-neutral-200/80 rounded-2xl p-6 sm:p-10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left 5 cols: Details */}
+            <div className="lg:col-span-5 space-y-6">
+              <div className="space-y-2">
+                <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full inline-block">
+                  Kadavanthra Hub
+                </span>
+                <h3 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
+                  District 7 Encore
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-500 font-light">
+                  Fine Dining, Pan-Asian, Signature Steaks &amp; Parisian Bakes
+                </p>
+              </div>
 
-          <div className="pt-2">
-            <a
-              href="https://wa.me/917736030777"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary w-full sm:w-auto inline-flex items-center justify-center"
-            >
-              Message us on WhatsApp
-            </a>
+              <div className="space-y-3.5 text-xs sm:text-sm text-neutral-700 font-light pt-2 border-t border-neutral-100">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-4 h-4 text-neutral-900 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-medium text-neutral-900 block">Address</span>
+                    <span>Ozone Greens, Jawahar Nagar, Kadavanthra, Kochi, Kerala 682020</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Clock className="w-4 h-4 text-neutral-900 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-medium text-neutral-900 block">Dining Hours</span>
+                    <span>Open Daily: 12:00 PM – 2:00 AM (Late Night)</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Phone className="w-4 h-4 text-neutral-900 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-medium text-neutral-900 block">Direct Concierge</span>
+                    <a href="tel:+917736030777" className="hover:text-black transition-colors font-medium">
+                      +91 7736 030 777
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://maps.google.com/?q=District+7+Encore+Kadavanthra+Kochi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary w-full sm:w-auto inline-flex items-center justify-center space-x-2 text-xs py-3 px-5"
+                >
+                  <Navigation className="w-3.5 h-3.5" />
+                  <span>Get Directions</span>
+                </a>
+                <a
+                  href="https://wa.me/917736030777?text=Hi%20District%207%20Encore,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Kadavanthra."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 border border-neutral-300 hover:border-neutral-900 text-neutral-900 px-5 py-3 rounded-full text-xs font-medium tracking-[0.08em] transition-colors"
+                >
+                  <span>Message on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right 7 cols: Interactive Google Map */}
+            <div className="lg:col-span-7">
+              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-neutral-200 shadow-inner bg-neutral-100">
+                <iframe
+                  title="District 7 Encore Kadavanthra Google Map"
+                  src="https://maps.google.com/maps?q=District%207%20Encore%20Kadavanthra%20Kochi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
+                  loading="lazy"
+                  allowFullScreen
+                />
+              </div>
+            </div>
           </div>
         </section>
       </main>
