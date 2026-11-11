@@ -226,144 +226,86 @@ export default function EncorePage() {
         </section>
 
         {/* Contact & Google Maps Section */}
-        <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-10">
-          <div className="text-center space-y-3">
-            <span className="text-[11px] uppercase tracking-[0.3em] font-semibold text-neutral-400 block">
+        <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-8">
+          <div className="text-center space-y-2">
+            <span className="text-[11px] uppercase tracking-[0.25em] font-medium text-neutral-400 block">
               Reservations &amp; Location
             </span>
-            <h2 className="font-playfair text-3xl sm:text-5xl text-neutral-900 font-normal">
+            <h2 className="font-playfair text-2xl sm:text-4xl text-neutral-900 font-normal">
               Visit District 7 Encore
             </h2>
-            <div className="w-12 h-px bg-neutral-300 mx-auto mt-4" />
           </div>
 
-          <div className="bg-white border border-neutral-200/90 rounded-3xl p-6 sm:p-10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-            {/* Left 5 cols: Details & CTAs */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
-              <div className="space-y-5">
-                <div className="space-y-2.5">
-                  <div className="flex items-center justify-between flex-wrap gap-2">
-                    <span className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-[0.25em] text-neutral-500 font-medium bg-neutral-100 px-3 py-1 rounded-full">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
-                      <span>Kadavanthra Hub • Kochi</span>
-                    </span>
-                    <span className="inline-flex items-center space-x-1.5 text-[10px] sm:text-[11px] font-medium text-emerald-800 bg-emerald-50/90 border border-emerald-200/70 px-3 py-1 rounded-full shadow-2xs">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      <span>Open Tonight until 2:00 AM</span>
-                    </span>
-                  </div>
-
-                  <h3 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
+          <div className="bg-white border border-neutral-200/80 rounded-2xl p-6 sm:p-8 shadow-xs">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-center">
+              {/* Left 5 cols: Details */}
+              <div className="md:col-span-5 space-y-5">
+                <div className="space-y-1.5">
+                  <h3 className="font-playfair text-xl sm:text-2xl text-neutral-900 font-normal">
                     District 7 Encore
                   </h3>
-                  <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">
-                    Fine Dining, Pan-Asian Gastronomy, Signature Steaks &amp; Parisian Bakes
+                  <p className="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
+                    Fine Dining, Pan-Asian Gastronomy &amp; Signature Steaks
                   </p>
+                </div>
 
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {['Pan-Asian', 'Signature Steaks', 'Molecular Gastronomy', 'French Bakes'].map((tag) => (
-                      <span key={tag} className="text-[10px] sm:text-[11px] font-medium text-neutral-700 bg-neutral-100 border border-neutral-200/60 px-2.5 py-1 rounded-md">
-                        {tag}
-                      </span>
-                    ))}
+                <div className="space-y-3 text-xs sm:text-sm text-neutral-600 font-light pt-1 border-t border-neutral-100">
+                  <div className="flex items-start space-x-2.5">
+                    <MapPin className="w-4 h-4 text-neutral-800 shrink-0 mt-0.5" />
+                    <span>Ozone Greens, Jawahar Nagar, Kadavanthra, Kochi 682020</span>
+                  </div>
+
+                  <div className="flex items-center space-x-2.5">
+                    <Clock className="w-4 h-4 text-neutral-800 shrink-0" />
+                    <span>Open Daily: 12:00 PM – 2:00 AM</span>
+                  </div>
+
+                  <div className="flex items-center space-x-2.5">
+                    <Phone className="w-4 h-4 text-neutral-800 shrink-0" />
+                    <a href="tel:+917736030777" className="hover:text-black transition-colors font-medium text-neutral-900">
+                      +91 7736 030 777
+                    </a>
                   </div>
                 </div>
 
-                <div className="bg-neutral-50/80 border border-neutral-200/70 rounded-2xl p-4 sm:p-5 space-y-4 text-xs sm:text-sm text-neutral-600 font-light">
-                  <div className="flex items-start space-x-3.5">
-                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
-                      <MapPin className="w-4 h-4 text-neutral-900" />
-                    </div>
-                    <div className="space-y-0.5 min-w-0">
-                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">Address</span>
-                      <span className="leading-relaxed block">Ozone Greens, Jawahar Nagar, Kadavanthra, Kochi, Kerala 682020</span>
-                      <span className="text-[11px] text-neutral-500 block pt-0.5">Behind GCDA Complex • Kadavanthra</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3.5 pt-3 border-t border-neutral-200/60">
-                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
-                      <Clock className="w-4 h-4 text-neutral-900" />
-                    </div>
-                    <div className="space-y-0.5 min-w-0">
-                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">Dining Hours</span>
-                      <span className="leading-relaxed block">Open Daily: 12:00 PM – 2:00 AM (Late Night)</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3.5 pt-3 border-t border-neutral-200/60">
-                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200/90 flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
-                      <Phone className="w-4 h-4 text-neutral-900" />
-                    </div>
-                    <div className="space-y-0.5 min-w-0">
-                      <span className="font-medium text-neutral-900 block text-[11px] tracking-wider uppercase">Direct Concierge</span>
-                      <a href="tel:+917736030777" className="hover:text-black transition-colors font-medium text-neutral-900 block">
-                        +91 7736 030 777
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <a
-                  href="https://maps.google.com/?q=District+7+Encore+Kadavanthra+Kochi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center space-x-2 border border-neutral-300 bg-white hover:bg-neutral-50 hover:border-neutral-900 text-neutral-900 px-4 py-3.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-2xs"
-                >
-                  <Navigation className="w-3.5 h-3.5 text-neutral-700" />
-                  <span>Get Directions</span>
-                  <ArrowUpRight className="w-3 h-3 text-neutral-400" />
-                </a>
-                <a
-                  href="https://wa.me/917736030777?text=Hi%20District%207%20Encore,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Kadavanthra."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center space-x-2 bg-neutral-950 text-white hover:bg-neutral-800 px-4 py-3.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-sm"
-                >
-                  <span>Book on WhatsApp</span>
-                  <ArrowUpRight className="w-3 h-3 text-neutral-400" />
-                </a>
-              </div>
-            </div>
-
-            {/* Right 7 cols: Interactive Google Map */}
-            <div className="lg:col-span-7 flex flex-col">
-              <div className="relative w-full flex-1 min-h-[380px] sm:min-h-[440px] rounded-2xl overflow-hidden border border-neutral-200/90 shadow-sm bg-neutral-100 group">
-                {/* Floating Glassmorphic Pill */}
-                <div className="absolute top-4 left-4 z-10 pointer-events-none">
-                  <span className="inline-flex items-center space-x-1.5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[10px] sm:text-[11px] font-medium text-neutral-800 shadow-sm border border-neutral-200/80">
-                    <MapPin className="w-3 h-3 text-neutral-900" />
-                    <span>Behind GCDA Complex • Kadavanthra</span>
-                  </span>
-                </div>
-
-                {/* Floating Quick Action */}
-                <div className="absolute bottom-4 right-4 z-10">
+                <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
                   <a
                     href="https://maps.google.com/?q=District+7+Encore+Kadavanthra+Kochi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1.5 bg-neutral-900/90 hover:bg-neutral-950 text-white backdrop-blur-md px-3.5 py-2 rounded-full text-[11px] font-medium transition-all shadow-md hover:scale-[1.02]"
+                    className="inline-flex items-center justify-center space-x-1.5 border border-neutral-300 hover:border-neutral-900 text-neutral-900 px-4 py-2.5 rounded-full text-xs font-medium transition-colors"
                   >
-                    <Navigation className="w-3 h-3 text-emerald-400" />
-                    <span>Open Full Map</span>
+                    <Navigation className="w-3.5 h-3.5 text-neutral-600" />
+                    <span>Get Directions</span>
+                    <ArrowUpRight className="w-3 h-3 text-neutral-400" />
+                  </a>
+                  <a
+                    href="https://wa.me/917736030777?text=Hi%20District%207%20Encore,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Kadavanthra."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center space-x-1.5 bg-neutral-900 hover:bg-neutral-800 text-white px-4 py-2.5 rounded-full text-xs font-medium transition-colors"
+                  >
+                    <span>Book on WhatsApp</span>
                     <ArrowUpRight className="w-3 h-3 text-neutral-400" />
                   </a>
                 </div>
+              </div>
 
-                <iframe
-                  title="District 7 Encore Kadavanthra Google Map"
-                  src="https://maps.google.com/maps?q=District%207%20Encore%20Kadavanthra%20Kochi&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="absolute inset-0 w-full h-full grayscale-[25%] group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-                />
+              {/* Right 7 cols: Clean Map Embed */}
+              <div className="md:col-span-7">
+                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-2xs">
+                  <iframe
+                    title="District 7 Encore Kadavanthra Google Map"
+                    src="https://maps.google.com/maps?q=District%207%20Encore%20Kadavanthra%20Kochi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
+                  />
+                </div>
               </div>
             </div>
           </div>
