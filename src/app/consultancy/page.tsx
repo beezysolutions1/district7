@@ -206,7 +206,7 @@ export default function ConsultancyPage() {
       <main className="flex-1">
         {/* Editorial Hero Banner */}
         <section className="relative w-full bg-[#111111] text-white overflow-hidden">
-          <div className="relative h-[55vh] min-h-[420px] w-full flex items-center justify-center">
+          <div className="relative h-[64vh] min-h-[520px] pt-24 pb-10 w-full flex items-center justify-center">
             <img
               src="https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/2022-12-01.jpg"
               alt="D7 Ventures Hospitality Consultancy & Architecture"
@@ -215,13 +215,17 @@ export default function ConsultancyPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/60" />
 
             <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-4">
-              <div className="inline-block border-y border-white/30 py-2 px-6 mb-1 space-y-0.5">
-                <span className="block text-[11px] uppercase tracking-[0.35em] text-neutral-200 font-light">
+              <div className="inline-flex flex-col items-center border-y border-white/25 py-2.5 px-8 mb-1">
+                <span className="text-[11px] uppercase tracking-[0.38em] pl-[0.38em] text-neutral-100 font-normal">
                   Hospitality Advisory
                 </span>
-                <span className="block text-[11px] uppercase tracking-[0.35em] text-neutral-200 font-light">
-                  D7 Ventures
-                </span>
+                <div className="flex items-center justify-center gap-3 mt-1.5">
+                  <span className="w-4 h-px bg-white/30" />
+                  <span className="text-[10px] uppercase tracking-[0.42em] pl-[0.42em] text-neutral-300 font-light">
+                    D7 Ventures
+                  </span>
+                  <span className="w-4 h-px bg-white/30" />
+                </div>
               </div>
 
               <h1 className="font-playfair text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
