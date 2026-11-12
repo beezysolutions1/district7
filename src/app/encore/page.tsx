@@ -53,7 +53,7 @@ export default function EncorePage() {
                 </span>
               </div>
               <h1 className="font-playfair text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
-                Welcome to d7 Encore (open late night)
+                Welcome to d7 Encore (12 noon to 2 am)
               </h1>
             </div>
           </div>
