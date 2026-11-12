@@ -215,9 +215,12 @@ export default function ConsultancyPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/60" />
 
             <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-4">
-              <div className="inline-block border-y border-white/30 py-1.5 px-6 mb-1">
-                <span className="text-[11px] uppercase tracking-[0.35em] text-neutral-200 font-light">
-                  Hospitality Advisory • D7 Ventures
+              <div className="inline-block border-y border-white/30 py-2 px-6 mb-1 space-y-0.5">
+                <span className="block text-[11px] uppercase tracking-[0.35em] text-neutral-200 font-light">
+                  Hospitality Advisory
+                </span>
+                <span className="block text-[11px] uppercase tracking-[0.35em] text-neutral-200 font-light">
+                  D7 Ventures
                 </span>
               </div>
 
