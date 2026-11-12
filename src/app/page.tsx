@@ -10,7 +10,7 @@ import LuxuryVisitSection from '../components/LuxuryVisitSection';
 import { ArrowUpRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'Multi Cuisine at district 7 - d7ventures.com',
+  title: 'Multi Cuisine at District 7 - d7ventures.com',
   description: 'Savor multi cuisine with Pan-Asian, Continental, Mediterranean and exquisite cakes and desserts served late night until 2 AM. Perfect for any craving!',
 };
 

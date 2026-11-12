@@ -5,7 +5,7 @@ import ScrollToTop from "../components/ScrollToTop";
 export const metadata: Metadata = {
   metadataBase: new URL("https://d7ventures.com"),
   title: {
-    default: "Multi Cuisine at district 7 - d7ventures.com",
+    default: "Multi Cuisine at District 7 - d7ventures.com",
     template: "%s | District 7 Kochi",
   },
   description:
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     "kadavanthra restaurants",
     "vyttila restro cafe",
     "late night food ernakulam",
-    "d7 encore",
-    "district 7 restro cafe",
+    "D7 Encore",
+    "District 7 Restro Cafe",
     "dulce cakes kochi",
     "best birthday cakes kochi",
     "hospitality consultancy kerala",

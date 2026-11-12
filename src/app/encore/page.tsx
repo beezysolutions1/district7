@@ -7,7 +7,7 @@ import { Download, ArrowDown, MapPin, Clock, Phone, Navigation, ArrowUpRight } f
 
 export const metadata = {
   title: 'Open Late Night, Steaks in Kochi, Restaurant in Kochi - d7ventures.com - Ernakulam, Kerala',
-  description: 'Welcome to d7 Encore. Multi cuisines restaurant open late night.',
+  description: 'Welcome to D7 Encore. Multi cuisines restaurant open late night.',
 };
 
 const encoreGalleryImages = [
@@ -41,7 +41,7 @@ export default function EncorePage() {
           <div className="relative h-[65vh] min-h-[460px] w-full flex items-center justify-center">
             <img
               src="https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_3183803445229557_1080x733.jpg"
-              alt="Welcome to d7 Encore Fine Dining"
+              alt="Welcome to D7 Encore Fine Dining"
               className="absolute inset-0 w-full h-full object-cover opacity-55 scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40" />
@@ -53,7 +53,7 @@ export default function EncorePage() {
                 </span>
               </div>
               <h1 className="font-playfair text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
-                Welcome to d7 Encore (12 noon to 2 am)
+                Welcome to D7 Encore (12 noon to 2 am)
               </h1>
             </div>
           </div>

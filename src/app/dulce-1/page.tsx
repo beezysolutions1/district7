@@ -8,7 +8,7 @@ import { Download, ArrowUpRight, MapPin, Clock, Phone, Navigation } from 'lucide
 
 export const metadata = {
   title: 'Dulce - d7ventures.com',
-  description: 'Welcome to d7 Dulce, our in-house patisserie for all things sweet and divine in Kochi.',
+  description: 'Welcome to D7 Dulce, our in-house patisserie for all things sweet and divine in Kochi.',
 };
 
 const dulceGalleryImages = [
@@ -35,7 +35,7 @@ export default function DulcePage() {
           <div className="relative h-[65vh] min-h-[460px] w-full flex items-center justify-center">
             <img
               src="https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_779453880848290_1440x1799.jpg"
-              alt="Welcome to d7 Dulce Haute Patisserie"
+              alt="Welcome to D7 Dulce Haute Patisserie"
               className="absolute inset-0 w-full h-full object-cover opacity-55 scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40" />
@@ -47,7 +47,7 @@ export default function DulcePage() {
                 </span>
               </div>
               <h1 className="font-playfair text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
-                Welcome to d7 Dulce
+                Welcome to D7 Dulce
               </h1>
             </div>
           </div>

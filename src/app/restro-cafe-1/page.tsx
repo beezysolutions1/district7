@@ -7,7 +7,7 @@ import { Download, ArrowDown, MapPin, Clock, Phone, Navigation, ArrowUpRight } f
 
 export const metadata = {
   title: 'Restro Cafe - d7ventures.com',
-  description: 'Welcome to d7 Restro Cafe in Vyttila, Kochi. Best reviewed Steaks in Kochi.',
+  description: 'Welcome to D7 Restro Cafe in Vyttila, Kochi. Best reviewed Steaks in Kochi.',
 };
 
 const restroCafeGalleryImages = [
@@ -41,7 +41,7 @@ export default function RestroCafePage() {
           <div className="relative h-[65vh] min-h-[460px] w-full flex items-center justify-center">
             <img
               src="https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_532915142168833_1440x1440.jpg"
-              alt="Welcome to d7 Restro Cafe Vyttila"
+              alt="Welcome to D7 Restro Cafe Vyttila"
               className="absolute inset-0 w-full h-full object-cover opacity-55 scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40" />
@@ -53,7 +53,7 @@ export default function RestroCafePage() {
                 </span>
               </div>
               <h1 className="font-playfair text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
-                Welcome to d7 Restro Cafe
+                Welcome to D7 Restro Cafe
               </h1>
             </div>
           </div>
