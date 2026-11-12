@@ -136,10 +136,10 @@ export default function DulcePage() {
         />
 
         {/* Contact & Google Maps Section */}
-        <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-8 border-t border-neutral-200">
+        <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-8 border-t border-neutral-200">
           <div className="text-center space-y-2">
             <span className="text-[11px] uppercase tracking-[0.25em] font-medium text-neutral-400 block">
-              Cake Orders &amp; Boutique
+              Location
             </span>
             <h2 className="font-playfair text-2xl sm:text-4xl text-neutral-900 font-normal">
               Visit Dulce Patisserie
@@ -147,63 +147,56 @@ export default function DulcePage() {
           </div>
 
           <div className="bg-white border border-neutral-200/80 rounded-2xl p-6 sm:p-8 shadow-xs">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
               {/* Left 5 cols: Details */}
-              <div className="md:col-span-5 space-y-5">
-                <div className="space-y-1.5">
-                  <h3 className="font-playfair text-xl sm:text-2xl text-neutral-900 font-normal">
-                    Dulce Patisserie
-                  </h3>
-                  <p className="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
-                    Artisan Pastries, Entremets &amp; Custom Celebration Cakes
-                  </p>
+              <div className="md:col-span-5 flex flex-col justify-between space-y-6">
+                <div className="space-y-5">
+                  <div className="space-y-1.5">
+                    <h3 className="font-playfair text-xl sm:text-2xl text-neutral-900 font-normal">
+                      Dulce Patisserie
+                    </h3>
+                    <p className="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
+                      Artisan Pastries, Entremets &amp; Custom Celebration Cakes
+                    </p>
+                  </div>
+
+                  <div className="space-y-3.5 text-xs sm:text-sm text-neutral-600 font-light pt-3 border-t border-neutral-100">
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="w-4 h-4 text-neutral-800 shrink-0 mt-0.5" />
+                      <span className="leading-relaxed">Ozone Greens, Jawahar Nagar, Kadavanthra, Kochi 682020</span>
+                    </div>
+
+                    <div className="flex items-center space-x-3">
+                      <Clock className="w-4 h-4 text-neutral-800 shrink-0" />
+                      <span>Open Daily: 12:00 PM – 2:00 AM</span>
+                    </div>
+
+                    <div className="flex items-center space-x-3">
+                      <Phone className="w-4 h-4 text-neutral-800 shrink-0" />
+                      <a href="tel:+917736030777" className="hover:text-black transition-colors font-medium text-neutral-900">
+                        +91 7736 030 777
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="space-y-3 text-xs sm:text-sm text-neutral-600 font-light pt-1 border-t border-neutral-100">
-                  <div className="flex items-start space-x-2.5">
-                    <MapPin className="w-4 h-4 text-neutral-800 shrink-0 mt-0.5" />
-                    <span>Ozone Greens, Jawahar Nagar, Kadavanthra, Kochi 682020</span>
-                  </div>
-
-                  <div className="flex items-center space-x-2.5">
-                    <Clock className="w-4 h-4 text-neutral-800 shrink-0" />
-                    <span>Open Daily: 12:00 PM – 2:00 AM</span>
-                  </div>
-
-                  <div className="flex items-center space-x-2.5">
-                    <Phone className="w-4 h-4 text-neutral-800 shrink-0" />
-                    <a href="tel:+917736030777" className="hover:text-black transition-colors font-medium text-neutral-900">
-                      +91 7736 030 777
-                    </a>
-                  </div>
-                </div>
-
-                <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
+                <div className="pt-2">
                   <a
                     href="https://maps.google.com/?q=District+7+Encore+Kadavanthra+Kochi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center space-x-1.5 border border-neutral-300 hover:border-neutral-900 text-neutral-900 px-4 py-2.5 rounded-full text-xs font-medium transition-colors"
+                    className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-neutral-900 hover:bg-neutral-800 text-white px-6 py-3 rounded-full text-xs font-medium tracking-wide transition-colors"
                   >
-                    <Navigation className="w-3.5 h-3.5 text-neutral-600" />
+                    <Navigation className="w-3.5 h-3.5" />
                     <span>Get Directions</span>
-                    <ArrowUpRight className="w-3 h-3 text-neutral-400" />
-                  </a>
-                  <a
-                    href="https://wa.me/917736030777?text=Hi%20Dulce%20Patisserie,%20I%20would%20like%20to%20order%20a%20cake%20or%20dessert%20box."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center space-x-1.5 bg-neutral-900 hover:bg-neutral-800 text-white px-4 py-2.5 rounded-full text-xs font-medium transition-colors"
-                  >
-                    <span>Order on WhatsApp</span>
-                    <ArrowUpRight className="w-3 h-3 text-neutral-400" />
+                    <ArrowUpRight className="w-3.5 h-3.5 text-neutral-400" />
                   </a>
                 </div>
               </div>
 
-              {/* Right 7 cols: Clean Map Embed */}
-              <div className="md:col-span-7">
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-2xs">
+              {/* Right 7 cols: Flush-Aligned Map Embed */}
+              <div className="md:col-span-7 flex flex-col">
+                <div className="relative w-full flex-1 min-h-[280px] sm:min-h-[320px] rounded-xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-2xs">
                   <iframe
                     title="Dulce Patisserie Kadavanthra Google Map"
                     src="https://maps.google.com/maps?q=District%207%20Encore%20Kadavanthra%20Kochi&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -213,7 +206,7 @@ export default function DulcePage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full"
+                    className="absolute inset-0 w-full h-full grayscale-[15%] hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
               </div>
