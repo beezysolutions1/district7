@@ -158,41 +158,21 @@ export default function EncorePage() {
           images={encoreGalleryImages}
         />
 
-        {/* Split Section 2: Private Events & High Tea (Editorial Cards) */}
+        {/* Section 2: Private Events (Editorial Card) */}
         <section className="py-16 sm:py-20 bg-[#FAFAFA] border-t border-b border-neutral-200">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-6 sm:gap-10">
-              {/* Private Events Card */}
-              <div className="bg-white p-6 sm:p-10 lg:p-12 border border-neutral-200 rounded-sm shadow-sm space-y-4 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-neutral-400 block">
-                    Exclusive Celebrations
-                  </span>
-                  <h2 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
-                    Private Events
-                  </h2>
-                  <div className="w-8 h-px bg-neutral-300" />
-                  <p className="text-neutral-700 text-sm sm:text-base leading-relaxed font-light pt-2">
-                    Looking for the perfect venue for your next special event? Look no further than Encore. Our private event spaces are perfect for everything from intimate dinners to large celebrations.
-                  </p>
-                </div>
-              </div>
-
-              {/* High Tea Card */}
-              <div className="bg-white p-6 sm:p-10 lg:p-12 border border-neutral-200 rounded-sm shadow-sm space-y-4 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-neutral-400 block">
-                    Afternoon Ritual
-                  </span>
-                  <h2 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
-                    High Tea
-                  </h2>
-                  <div className="w-8 h-px bg-neutral-300" />
-                  <p className="text-neutral-700 text-sm sm:text-base leading-relaxed font-light pt-2">
-                    Join us for High Tea from Monday to Thursday 3:30pm - 6:30pm. Enjoy discounted drinks, appetizers and desserts in our cozy lobby.
-                  </p>
-                </div>
-              </div>
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Private Events Card */}
+            <div className="bg-white p-8 sm:p-12 border border-neutral-200 rounded-sm shadow-sm space-y-4 text-center">
+              <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-neutral-400 block">
+                Exclusive Celebrations
+              </span>
+              <h2 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
+                Private Events
+              </h2>
+              <div className="w-8 h-px bg-neutral-300 mx-auto" />
+              <p className="text-neutral-700 text-sm sm:text-base leading-relaxed font-light pt-2 max-w-xl mx-auto">
+                Looking for the perfect venue for your next special event? Look no further than Encore. Our private event spaces are perfect for everything from intimate dinners to large celebrations.
+              </p>
             </div>
           </div>
         </section>
