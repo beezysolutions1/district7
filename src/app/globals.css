@@ -167,3 +167,35 @@ p, span, li, a, button, input, textarea, select {
 .animate-candlePulse {
   animation: candlePulse 7s ease-in-out infinite;
 }
+
+@keyframes ambientBreathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95) translate(0, 0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1) translate(10px, -8px);
+  }
+}
+
+@keyframes ambientDrift {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1.05) translate(0, 0);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.92) translate(-12px, 10px);
+  }
+}
+
+.animate-ambientBreathe {
+  animation: ambientBreathe 9s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-ambientDrift {
+  animation: ambientDrift 11s ease-in-out infinite;
+  will-change: transform, opacity;
+}

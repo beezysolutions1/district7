@@ -158,15 +158,15 @@ export default function EncorePage() {
           images={encoreGalleryImages}
         />
 
-        {/* Section 2: Private Events (Editorial Light Warm Aesthetic) */}
+        {/* Section 2: Private Events (Editorial Light Warm Aesthetic with Living Ambient Light) */}
         <section className="relative py-20 sm:py-24 bg-[#FAF9F6] border-t border-b border-neutral-200/80 overflow-hidden">
-          {/* Subtle Warm Architectural Ambient Lighting */}
-          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gradient-to-br from-amber-100/40 via-stone-100/30 to-transparent blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-gradient-to-tr from-stone-200/40 via-amber-50/30 to-transparent blur-3xl pointer-events-none" />
+          {/* Living Ambient Warm Sunlight Pools (Hypnotic Breathing Rhythm) */}
+          <div className="absolute -top-28 -right-28 w-[420px] h-[420px] rounded-full bg-gradient-to-br from-amber-200/45 via-orange-100/30 to-transparent blur-3xl pointer-events-none animate-ambientBreathe" />
+          <div className="absolute -bottom-28 -left-28 w-[460px] h-[460px] rounded-full bg-gradient-to-tr from-stone-300/40 via-amber-100/30 to-transparent blur-3xl pointer-events-none animate-ambientDrift" />
 
           <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            {/* Clean Editorial Card */}
-            <div className="bg-white p-8 sm:p-12 lg:p-14 rounded-2xl border border-neutral-200/80 shadow-xs space-y-4">
+            {/* Clean Editorial Card with subtle tactile hover */}
+            <div className="group bg-white/95 backdrop-blur-xs p-8 sm:p-12 lg:p-14 rounded-2xl border border-neutral-200/80 shadow-xs hover:shadow-md hover:border-neutral-300/90 hover:-translate-y-0.5 transition-all duration-700 ease-out space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-neutral-400 block">
                 Exclusive Celebrations
               </span>
@@ -175,7 +175,7 @@ export default function EncorePage() {
                 Private Events
               </h2>
 
-              <div className="w-12 h-px bg-neutral-300 mx-auto" />
+              <div className="w-12 h-px bg-neutral-300 mx-auto group-hover:w-16 group-hover:bg-neutral-400 transition-all duration-700 ease-out" />
 
               <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light pt-1 max-w-xl mx-auto">
                 Looking for the perfect venue for your next special event? Look no further than Encore. Our private event spaces are perfect for everything from intimate dinners to large celebrations.
