@@ -158,70 +158,28 @@ export default function EncorePage() {
           images={encoreGalleryImages}
         />
 
-        {/* Section 2: Private Events — Evening Sanctuary Aesthetic */}
-        <section className="relative py-20 sm:py-28 bg-[#0E0D0C] text-white overflow-hidden border-t border-b border-white/10">
-          {/* Subtle Ambient Radial Glows (Candlelight & Fine Dining Warmth) */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[380px] bg-gradient-to-r from-amber-700/15 via-orange-600/10 to-amber-900/15 blur-3xl pointer-events-none rounded-full" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(217,119,6,0.08),transparent_75%)] pointer-events-none" />
+        {/* Section 2: Private Events (Editorial Light Warm Aesthetic) */}
+        <section className="relative py-20 sm:py-24 bg-[#FAF9F6] border-t border-b border-neutral-200/80 overflow-hidden">
+          {/* Subtle Warm Architectural Ambient Lighting */}
+          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gradient-to-br from-amber-100/40 via-stone-100/30 to-transparent blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-gradient-to-tr from-stone-200/40 via-amber-50/30 to-transparent blur-3xl pointer-events-none" />
 
-          {/* Fine Tactile Linen / Plaster Micro-Grain Texture */}
-          <div
-            className="absolute inset-0 opacity-[0.035] pointer-events-none mix-blend-screen"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
-            }}
-          />
+          <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            {/* Clean Editorial Card */}
+            <div className="bg-white p-8 sm:p-12 lg:p-14 rounded-2xl border border-neutral-200/80 shadow-xs space-y-4">
+              <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-neutral-400 block">
+                Exclusive Celebrations
+              </span>
 
-          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            {/* Framed Editorial Sanctuary Card */}
-            <div className="relative bg-white/[0.03] backdrop-blur-md border border-white/15 rounded-2xl p-8 sm:p-14 lg:p-16 shadow-2xl space-y-6">
-              {/* Eyebrow with hairline accents */}
-              <div className="inline-flex items-center space-x-3 mb-1">
-                <span className="w-6 h-px bg-amber-400/40" />
-                <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-amber-200/90 font-medium pl-[0.35em]">
-                  Exclusive Celebrations
-                </span>
-                <span className="w-6 h-px bg-amber-400/40" />
-              </div>
-
-              {/* Title */}
-              <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl text-white font-normal tracking-tight">
+              <h2 className="font-playfair text-3xl sm:text-4xl text-neutral-900 font-normal tracking-tight">
                 Private Events
               </h2>
 
-              <div className="w-12 h-px bg-amber-400/40 mx-auto" />
+              <div className="w-12 h-px bg-neutral-300 mx-auto" />
 
-              {/* Description */}
-              <p className="text-neutral-300 text-sm sm:text-base lg:text-lg leading-relaxed font-light max-w-2xl mx-auto">
+              <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light pt-1 max-w-xl mx-auto">
                 Looking for the perfect venue for your next special event? Look no further than Encore. Our private event spaces are perfect for everything from intimate dinners to large celebrations.
               </p>
-
-              {/* Curated Luxury Highlight Tags */}
-              <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs font-light">
-                <span className="px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300">
-                  Custom Curated Menus
-                </span>
-                <span className="px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300">
-                  Intimate &amp; Large Gatherings
-                </span>
-                <span className="px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300">
-                  Late-Night Dining
-                </span>
-              </div>
-
-              {/* Inquiry Action */}
-              <div className="pt-3 flex justify-center">
-                <a
-                  href="https://wa.me/917736030777?text=Hi%20Encore%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20private%20event."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-neutral-950 font-medium px-8 py-3.5 rounded-full text-xs sm:text-sm tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-amber-950/40"
-                >
-                  <span>Inquire for Private Bookings</span>
-                  <ArrowUpRight className="w-4 h-4 text-neutral-950" />
-                </a>
-              </div>
             </div>
           </div>
         </section>
