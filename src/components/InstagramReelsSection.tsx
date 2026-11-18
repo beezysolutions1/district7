@@ -43,7 +43,7 @@ export default function InstagramReelsSection() {
           <span>Follow Our Food Journey on Instagram</span>
         </div>
         <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl text-neutral-900 font-normal">
-          Behind the Pass &amp; Late Nights
+          Kochi&apos;s Late-Night Fix
         </h2>
         <div className="w-12 h-px bg-neutral-300 mx-auto mt-4" />
       </div>
