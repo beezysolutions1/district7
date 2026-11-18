@@ -160,8 +160,8 @@ export default function HomePage() {
               <div className="group bg-white border border-neutral-200/90 rounded-sm overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-500">
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
                   <img
-                    src="https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_779453880848290_1440x1799.jpg"
-                    alt="District 7 Dulce"
+                    src="/images/gallery/d7-dulce-patisserie.jpg"
+                    alt="District 7 Dulce Haute Patisserie"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-neutral-800">
