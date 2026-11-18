@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Clock, MapPin } from 'lucide-react';
 
 const restroCulinaryShowcaseImages = [
   {
@@ -109,34 +109,47 @@ export default function RestroCafeMenu() {
           ))}
         </div>
 
-        {/* Bottom Concierge & Reservation Bar */}
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-stone-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-stone-400 font-medium block">
-              Late-Night Vibe &amp; Restro Cafe
-            </span>
-            <p className="text-stone-700 text-xs sm:text-sm font-light pt-0.5">
-              Open Daily 12:00 PM – 3:00 AM • Vyttila, Kochi
+        {/* Bottom Concierge & Reservation Card */}
+        <div className="mt-14 sm:mt-18 rounded-2xl bg-white border border-stone-200/90 p-6 sm:p-8 lg:p-9 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1.5 text-center md:text-left">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-[10px] uppercase tracking-[0.2em] font-medium text-stone-600 mb-0.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+              <span>Late-Night Restro Cafe Vibe</span>
+            </div>
+            <h3 className="font-playfair text-xl sm:text-2xl text-neutral-900 font-normal">
+              Table Reservations &amp; Dining Concierge
+            </h3>
+            <p className="text-stone-500 text-xs sm:text-sm font-light flex items-center justify-center md:justify-start gap-2 flex-wrap">
+              <span className="inline-flex items-center space-x-1.5">
+                <Clock className="w-3.5 h-3.5 text-stone-400" />
+                <span>Open Daily 12:00 PM – 3:00 AM</span>
+              </span>
+              <span className="text-stone-300 hidden sm:inline">•</span>
+              <span className="inline-flex items-center space-x-1.5">
+                <MapPin className="w-3.5 h-3.5 text-stone-400" />
+                <span>Vyttila, Kochi</span>
+              </span>
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto shrink-0">
             <a
               href="https://wa.me/917736030777?text=Hi%20District%207%20Restro%20Cafe%2C%20I%20would%20like%20to%20reserve%20a%20table."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-full bg-white border border-stone-300 hover:bg-stone-50 text-neutral-900 text-xs tracking-wider transition-colors shadow-xs font-medium"
+              className="inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-full bg-white border border-stone-300 hover:bg-stone-50 text-neutral-900 text-xs sm:text-sm tracking-wider font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-xs text-center"
             >
               <span>Reserve a Table</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-stone-500" />
+              <ArrowUpRight className="w-4 h-4 text-stone-500" />
             </a>
             <a
               href={airmenusUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-full bg-neutral-950 hover:bg-neutral-800 text-white text-xs tracking-wider transition-all duration-200 shadow-sm font-medium"
+              className="inline-flex items-center justify-center space-x-2 px-7 py-3.5 rounded-full bg-neutral-950 hover:bg-neutral-800 text-white text-xs sm:text-sm tracking-wider font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-neutral-950/10 text-center"
             >
               <span>Order on Airmenus</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-4 h-4 text-neutral-400" />
             </a>
           </div>
         </div>
