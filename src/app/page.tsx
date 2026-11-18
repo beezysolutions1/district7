@@ -15,15 +15,24 @@ export const metadata = {
 };
 
 const homeGalleryImages = [
-  { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/ig_18072126436443892.jpg', alt: 'District 7 Culinary Showcase' },
-  { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_3220127014930533_1080x1080.jpg', alt: 'District 7 Dish Presentation' },
+  { url: '/images/gallery/d7-prime-steak.jpg', alt: 'District 7 Signature Prime Steak & Truffle Mash' },
   { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/2022-12-01.jpg', alt: 'District 7 Dining Room' },
+  { url: '/images/gallery/d7-gourmet-burger.jpg', alt: 'District 7 Gourmet Double Smash Burger with Golden Fries' },
+  { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/ig_18072126436443892.jpg', alt: 'District 7 Culinary Showcase' },
+  { url: '/images/gallery/d7-ambient-dining-hall.jpg', alt: 'District 7 Ambient Dining Hall & Velvet Seating' },
+  { url: '/images/gallery/d7-pesto-pasta.jpg', alt: 'District 7 Artisan Basil Pesto Spaghetti with Sun-Dried Tomatoes' },
   { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_878749324252078_1440x1440.jpg', alt: 'District 7 Gourmet Dessert' },
+  { url: '/images/gallery/d7-cocktails-table.jpg', alt: 'District 7 Handcrafted Mocktails & Tropical Coolers' },
+  { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_779453877514957_1440x1799.jpg', alt: 'District 7 Sizzler Platter' },
+  { url: '/images/gallery/d7-dining-wall-art.jpg', alt: 'District 7 Architectural Geometric Wall & Intimate Tables' },
+  { url: '/images/gallery/d7-asian-wings.jpg', alt: 'District 7 Asian Glazed Chicken Drumsticks Appetizer' },
+  { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_3220127014930533_1080x1080.jpg', alt: 'District 7 Dish Presentation' },
+  { url: '/images/gallery/d7-dining-nook.jpg', alt: 'District 7 Intimate Dining Corner' },
   { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_878749320918745_1440x1440.jpg', alt: 'District 7 Sweet Treat' },
+  { url: '/images/gallery/d7-interior-mirror.jpg', alt: 'District 7 Vintage Patina Mirror & Cafe Display' },
   { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_3286596174950283_1080x1080.jpg', alt: 'District 7 Signature Entree' },
   { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_532915142168833_1440x1440.jpg', alt: 'District 7 Cafe Experience' },
   { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/IMG-20241115-WA0015.jpg', alt: 'District 7 Table Spread' },
-  { url: 'https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_779453877514957_1440x1799.jpg', alt: 'District 7 Sizzler Platter' },
 ];
 
 export default function HomePage() {

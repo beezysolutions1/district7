@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, ChevronLeft, ChevronRight, Maximize2, Shuffle } from 'lucide-react';
 
 interface EditorialGalleryProps {
   title?: string;
@@ -14,21 +14,38 @@ export default function EditorialGallery({
   subtitle = 'Visual Journey',
   images,
 }: EditorialGalleryProps) {
+  const [galleryImages, setGalleryImages] = useState(images);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIdx, setLightboxIdx] = useState(0);
   const touchStartX = React.useRef<number | null>(null);
 
+  // Sync if images prop changes
+  useEffect(() => {
+    setGalleryImages(images);
+  }, [images]);
+
+  const handleShuffle = () => {
+    setGalleryImages((prev) => {
+      const arr = [...prev];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    });
+  };
+
   // Duplicate images for a seamless, continuous infinite loop
-  const duplicatedImages = [...images, ...images];
+  const duplicatedImages = [...galleryImages, ...galleryImages];
 
   const handlePrev = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    setLightboxIdx((prev) => (prev - 1 + images.length) % images.length);
+    setLightboxIdx((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
   };
 
   const handleNext = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    setLightboxIdx((prev) => (prev + 1) % images.length);
+    setLightboxIdx((prev) => (prev + 1) % galleryImages.length);
   };
 
   const handleLightboxTouchStart = (e: React.TouchEvent) => {
@@ -47,15 +64,26 @@ export default function EditorialGallery({
     touchStartX.current = null;
   };
 
-  const currentItem = images[lightboxIdx] || images[0];
+  const currentItem = galleryImages[lightboxIdx] || galleryImages[0];
 
   return (
     <section className="py-24 max-w-full overflow-hidden border-t border-neutral-100 bg-white">
       {/* Editorial Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-14 px-4 sm:px-6 space-y-3">
-        <span className="text-[11px] uppercase tracking-[0.3em] font-semibold text-neutral-400 block">
-          {subtitle}
-        </span>
+      <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 px-4 sm:px-6 space-y-3">
+        <div className="flex items-center justify-center gap-2.5">
+          <span className="text-[11px] uppercase tracking-[0.3em] font-semibold text-neutral-400 block">
+            {subtitle}
+          </span>
+          <button
+            type="button"
+            onClick={handleShuffle}
+            className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200/90 text-neutral-700 text-[10px] uppercase tracking-[0.15em] font-medium transition-all duration-300 hover:scale-105 active:scale-95 border border-neutral-200 shadow-xs cursor-pointer"
+            title="Shuffle photos"
+          >
+            <Shuffle className="w-3 h-3 text-neutral-500" />
+            <span>Shuffle</span>
+          </button>
+        </div>
         <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl text-neutral-900 font-normal">
           {title}
         </h2>
@@ -71,7 +99,7 @@ export default function EditorialGallery({
         {/* Continuous Gliding Track */}
         <div className="animate-infiniteReel flex items-center space-x-4 sm:space-x-7 px-4">
           {duplicatedImages.map((img, idx) => {
-            const actualIdx = idx % images.length;
+            const actualIdx = idx % galleryImages.length;
             return (
               <div
                 key={`${img.url}-${idx}`}
@@ -114,7 +142,7 @@ export default function EditorialGallery({
           <div className="w-full flex items-center justify-between text-white z-20">
             <div>
               <span className="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400 font-mono">
-                {String(lightboxIdx + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
+                {String(lightboxIdx + 1).padStart(2, '0')} / {String(galleryImages.length).padStart(2, '0')}
               </span>
               <p className="text-xs sm:text-sm font-playfair text-white mt-0.5 line-clamp-1">
                 {currentItem.alt || title}
