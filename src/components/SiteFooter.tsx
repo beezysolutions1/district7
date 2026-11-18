@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Phone, MapPin, Clock, ArrowUpRight, Instagram } from 'lucide-react';
+import { Phone, MapPin, Clock, ArrowUpRight, Instagram, Facebook } from 'lucide-react';
 
 export default function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -24,19 +24,34 @@ export default function SiteFooter() {
               From our quirky food truck in 2014 to multi-cuisine dining, Pan-Asian delicacies, signature steaks, and French haute patisserie. Welcoming guests late night in Kadavanthra and Vyttila.
             </p>
 
-            {/* Social Media Link */}
-            <div className="pt-2">
-              <a
-                href="https://www.instagram.com/district7kochi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-xs text-neutral-300 hover:text-white transition-colors"
-                aria-label="District 7 on Instagram"
-              >
-                <Instagram className="w-4 h-4 text-neutral-400" />
-                <span>@district7kochi on Instagram</span>
-                <ArrowUpRight className="w-3 h-3 text-neutral-500" />
-              </a>
+            {/* Social Media Links */}
+            <div className="pt-2 space-y-2">
+              <div>
+                <a
+                  href="https://www.instagram.com/district7kochi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-xs text-neutral-300 hover:text-white transition-colors"
+                  aria-label="District 7 on Instagram"
+                >
+                  <Instagram className="w-4 h-4 text-neutral-400" />
+                  <span>@district7kochi on Instagram</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-500" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.facebook.com/D7Cochin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-xs text-neutral-300 hover:text-white transition-colors"
+                  aria-label="District 7 on Facebook"
+                >
+                  <Facebook className="w-4 h-4 text-neutral-400" />
+                  <span>District 7 Cochin on Facebook</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-500" />
+                </a>
+              </div>
             </div>
           </div>
 
