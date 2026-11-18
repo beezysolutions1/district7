@@ -65,10 +65,6 @@ export default function EncoreMenu() {
         {/* Airmenus Live Digital Ordering Action Banner */}
         <div className="mb-10 sm:mb-12 bg-white rounded-2xl border border-stone-200/90 p-6 sm:p-8 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1.5 text-center md:text-left">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-[10px] uppercase tracking-[0.2em] font-medium text-emerald-900 mb-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Live Digital Menu &amp; Ordering</span>
-            </div>
             <h3 className="font-playfair text-2xl sm:text-3xl text-neutral-900 font-normal">
               Explore Full Menu &amp; Live Prices on Airmenus
             </h3>
