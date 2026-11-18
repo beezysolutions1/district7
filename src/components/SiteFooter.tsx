@@ -63,23 +63,12 @@ export default function SiteFooter() {
               </li>
               <li className="pt-1">
                 <a
-                  href="https://img1.wsimg.com/blobby/go/351c4fe6-4561-484e-b03d-17791075b6bf/Website%20purpose%20Sept%2012%202024%20ENCORE%20MENU.pdf"
+                  href="https://airmenus.in/district7/order/Dine-In/Seasonal%20Menu?sId=1216136"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-white transition-colors inline-flex items-center space-x-1"
                 >
-                  <span>Encore Carte (PDF)</span>
-                  <ArrowUpRight className="w-3 h-3 text-neutral-500" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://img1.wsimg.com/blobby/go/351c4fe6-4561-484e-b03d-17791075b6bf/Dulce%20Cake%20Menu%202025.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-400 hover:text-white transition-colors inline-flex items-center space-x-1"
-                >
-                  <span>Dulce Cake Menu (PDF)</span>
+                  <span>AirMenus Digital Menu</span>
                   <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                 </a>
               </li>

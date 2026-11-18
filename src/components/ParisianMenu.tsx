@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Download, ArrowUpRight, LayoutGrid, List } from 'lucide-react';
+import { ArrowUpRight, LayoutGrid, List } from 'lucide-react';
 
 interface PriceOption {
   size: string;
@@ -460,22 +460,12 @@ export default function ParisianMenu() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full sm:w-auto shrink-0">
-              <a
-                href="https://img1.wsimg.com/blobby/go/351c4fe6-4561-484e-b03d-17791075b6bf/Dulce%20Cake%20Menu%202025.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-full border border-stone-300 bg-white hover:bg-stone-50 text-neutral-900 text-xs tracking-wider transition-colors shadow-xs text-center font-medium"
-              >
-                <Download className="w-3.5 h-3.5 text-stone-500" />
-                <span>2025 Catalogue (PDF)</span>
-              </a>
-
+            <div className="flex items-center justify-center w-full sm:w-auto shrink-0">
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-full bg-neutral-900 hover:bg-black text-white text-xs tracking-wider transition-all duration-200 shadow-sm hover:scale-[1.01] text-center font-medium"
+                className="inline-flex items-center justify-center space-x-2 px-8 py-3.5 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm tracking-wider transition-all duration-200 shadow-sm hover:scale-[1.01] text-center font-medium"
               >
                 <span>Order via WhatsApp</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

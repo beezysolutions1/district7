@@ -3,7 +3,7 @@ import SiteHeader from '../../components/SiteHeader';
 import SiteFooter from '../../components/SiteFooter';
 import EditorialGallery from '../../components/EditorialGallery';
 import RestroCafeMenu from '../../components/RestroCafeMenu';
-import { Download, ArrowDown, MapPin, Clock, Phone, Navigation, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, MapPin, Clock, Phone, Navigation, ArrowUpRight } from 'lucide-react';
 
 export const metadata = {
   title: 'Restro Cafe - d7ventures.com',
@@ -127,20 +127,20 @@ export default function RestroCafePage() {
                 {/* Integrated Seamless Menu Action */}
                 <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <a
-                    href="#menu"
-                    className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-neutral-950 text-white hover:bg-neutral-800 px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-neutral-950/10"
-                  >
-                    <span>Explore House Specials</span>
-                    <ArrowDown className="w-4 h-4 text-neutral-400" />
-                  </a>
-                  <a
-                    href="https://img1.wsimg.com/blobby/go/351c4fe6-4561-484e-b03d-17791075b6bf/Vytilla%20Resto%20Cafe%20Menu%202025.pdf"
+                    href="https://airmenus.in/district7/order/Dine-In/Seasonal%20Menu?sId=1216136"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-neutral-950 text-white hover:bg-neutral-800 px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-neutral-950/10"
+                  >
+                    <span>Open Airmenus Digital Menu</span>
+                    <ArrowUpRight className="w-4 h-4 text-neutral-400" />
+                  </a>
+                  <a
+                    href="#menu"
                     className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 border border-stone-300 bg-white hover:bg-stone-50 text-neutral-900 px-6 py-3.5 rounded-full text-xs sm:text-sm font-medium tracking-[0.08em] transition-colors shadow-xs"
                   >
-                    <Download className="w-4 h-4 text-stone-500" />
-                    <span>Download Full Menu (PDF)</span>
+                    <span>View Culinary Showcase</span>
+                    <ArrowDown className="w-4 h-4 text-stone-500" />
                   </a>
                 </div>
               </div>

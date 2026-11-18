@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Download, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const restroCulinaryShowcaseImages = [
   {
@@ -44,8 +44,6 @@ const restroCulinaryShowcaseImages = [
 
 export default function RestroCafeMenu() {
   const airmenusUrl = 'https://airmenus.in/district7/order/Dine-In/Seasonal%20Menu?sId=1216136';
-  const pdfMenuUrl =
-    'https://img1.wsimg.com/blobby/go/351c4fe6-4561-484e-b03d-17791075b6bf/Vytilla%20Resto%20Cafe%20Menu%202025.pdf';
 
   return (
     <section id="menu" className="relative py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-full overflow-hidden border-t border-stone-200/80 bg-[#FAF9F6]">
@@ -79,24 +77,15 @@ export default function RestroCafeMenu() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto shrink-0">
+          <div className="flex items-center justify-center w-full md:w-auto shrink-0">
             <a
               href={airmenusUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center space-x-2 bg-neutral-950 hover:bg-neutral-800 text-white px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-neutral-950/10 text-center"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-neutral-950 hover:bg-neutral-800 text-white px-8 py-3.5 rounded-full text-xs sm:text-sm font-medium tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-neutral-950/10 text-center"
             >
-              <span>Open Airmenus</span>
+              <span>Open Airmenus Digital Menu</span>
               <ArrowUpRight className="w-4 h-4 text-neutral-400" />
-            </a>
-            <a
-              href={pdfMenuUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center space-x-2 border border-stone-300 bg-white hover:bg-stone-50 text-neutral-900 px-6 py-3.5 rounded-full text-xs sm:text-sm font-medium tracking-[0.08em] transition-colors shadow-xs text-center"
-            >
-              <Download className="w-4 h-4 text-stone-500" />
-              <span>Download PDF</span>
             </a>
           </div>
         </div>
