@@ -46,6 +46,9 @@ export default function InstagramReelsSection() {
           Kochi&apos;s Late-Night Fix
         </h2>
         <div className="w-12 h-px bg-neutral-300 mx-auto mt-4" />
+        <p className="text-neutral-500 text-xs sm:text-sm tracking-wide font-light max-w-lg mx-auto pt-1">
+          Great Food. Late Nights. Open Till 2 AM
+        </p>
       </div>
 
       {/* 4-Reel Showcase — Pure, uninterrupted video reels (unwanted text removed) */}
