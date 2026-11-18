@@ -43,7 +43,7 @@ const culinaryShowcaseImages = [
 ];
 
 export default function EncoreMenu() {
-  const airmenusUrl = 'https://airmenus.in/district7/order';
+  const airmenusUrl = 'https://airmenus.in/district7/order/Dine-In/Seasonal%20Menu?sId=1216136';
   const pdfMenuUrl =
     'https://img1.wsimg.com/blobby/go/351c4fe6-4561-484e-b03d-17791075b6bf/Website%20purpose%20Sept%2012%202024%20ENCORE%20MENU.pdf';
 
