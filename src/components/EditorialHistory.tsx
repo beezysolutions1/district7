@@ -48,7 +48,7 @@ export default function EditorialHistory() {
         {/* Main Two-Column Editorial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Authentic Editorial Paragraphs with Staggered Fade-Up */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-7">
             {/* Paragraph 1: Food Truck */}
             <p
               className={`text-neutral-700 text-base sm:text-lg leading-relaxed font-light transition-all duration-700 ease-out delay-100 ${
@@ -74,6 +74,15 @@ export default function EditorialHistory() {
               }`}
             >
               District 7 Encore – With fewer restaurants experimenting with fusion, molecular gastronomy and international flavors, the team at District 7 was inspired by a deep desire to bring forth exceptional multi cuisine and essence to Kerala. Thus was born – Encore in 2022, a swanky and premium standalone restaurant with bespoke interiors, genteel service and a highly curated menu showcasing South East Asian, Mediterranean and European cuisine.
+            </p>
+
+            {/* Paragraph 4: Dulce Patisserie */}
+            <p
+              className={`text-neutral-700 text-base sm:text-lg leading-relaxed font-light transition-all duration-700 ease-out delay-500 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              }`}
+            >
+              Dulce, the patisserie was created to compliment Encore with its decadent French and European cakes and desserts and gourmet bakes.
             </p>
           </div>
 
