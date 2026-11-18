@@ -4,7 +4,7 @@ import SiteFooter from '../../components/SiteFooter';
 import EditorialGallery from '../../components/EditorialGallery';
 import ParisianMenu from '../../components/ParisianMenu';
 import DulceStoryShowcase from '../../components/DulceStoryShowcase';
-import { Download, ArrowUpRight, MapPin, Clock, Phone, Navigation } from 'lucide-react';
+import { ArrowUpRight, MapPin, Clock, Phone, Navigation } from 'lucide-react';
 
 export const metadata = {
   title: 'Dulce - d7ventures.com',
@@ -34,7 +34,7 @@ export default function DulcePage() {
         <section className="relative w-full bg-[#111111] text-white overflow-hidden">
           <div className="relative h-[65vh] min-h-[460px] w-full flex items-center justify-center">
             <img
-              src="https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/fb_779453880848290_1440x1799.jpg"
+              src="https://img1.wsimg.com/isteam/ip/351c4fe6-4561-484e-b03d-17791075b6bf/2024-08-13.jpg"
               alt="Welcome to D7 Dulce Haute Patisserie"
               className="absolute inset-0 w-full h-full object-cover opacity-55 scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
             />
