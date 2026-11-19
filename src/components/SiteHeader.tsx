@@ -40,6 +40,7 @@ export default function SiteHeader() {
     { label: 'Encore', href: '/encore' },
     { label: 'Restro Cafe', href: '/restro-cafe-1' },
     { label: 'Dulce', href: '/dulce-1' },
+    { label: 'Specials', href: '/specials' },
     { label: 'Consultancy', href: '/consultancy' },
     { label: 'Education', href: '/education' },
     { label: 'Career', href: '/career' },

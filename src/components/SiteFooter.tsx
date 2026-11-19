@@ -76,6 +76,11 @@ export default function SiteFooter() {
                   District 7 Dulce Patisserie
                 </Link>
               </li>
+              <li>
+                <Link href="/specials" className="hover:text-white transition-colors block py-0.5">
+                  Specials &amp; Events
+                </Link>
+              </li>
               <li className="pt-1">
                 <a
                   href="https://airmenus.in/district7/order/Dine-In/Seasonal%20Menu?sId=1216136"
@@ -143,6 +148,7 @@ export default function SiteFooter() {
                   <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                 </a>
               </div>
+              3333333
             </div>
 
             {/* Vyttila */}
