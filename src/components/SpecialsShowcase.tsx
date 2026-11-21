@@ -5,7 +5,7 @@ import { SPECIALS_DATA, SpecialItem } from '../data/specialsData';
 import { Clock, MapPin, Sparkles, ArrowUpRight, MessageCircle, Utensils } from 'lucide-react';
 
 const VENUES = ['All Venues', 'Encore Kadavanthra', 'Restro Cafe Vyttila', 'Dulce Patisserie'] as const;
-const CATEGORIES = ['All Categories', 'Steaks & Mains', 'Pan-Asian & Bites', 'Patisserie & Desserts', 'Events & Popups'] as const;
+const CATEGORIES = ['All Categories', 'Events', 'Special Dishes', 'Offers', 'Limited Items'] as const;
 
 export default function SpecialsShowcase() {
   const [selectedVenue, setSelectedVenue] = useState<string>('All Venues');
@@ -16,7 +16,7 @@ export default function SpecialsShowcase() {
   }, []);
 
   const featuredItem = useMemo(() => {
-    return activeItems.find((item) => item.featured) || activeItems[0];
+    return activeItems.find((item) => item.featured) || (activeItems.length > 0 ? activeItems[0] : null);
   }, [activeItems]);
 
   const filteredItems = useMemo(() => {
@@ -34,7 +34,7 @@ export default function SpecialsShowcase() {
 
   return (
     <div className="w-full">
-      {/* Featured Spotlight Card */}
+      {/* Featured Spotlight Card (renders when active items exist) */}
       {featuredItem && selectedVenue === 'All Venues' && selectedCategory === 'All Categories' && (
         <section className="mb-20">
           <div className="relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 shadow-2xl">
@@ -137,17 +137,17 @@ export default function SpecialsShowcase() {
 
           {/* Counter info */}
           <div className="text-xs text-neutral-500 font-light self-start sm:self-end">
-            Showing <span className="font-medium text-neutral-900">{filteredItems.length}</span> special{filteredItems.length === 1 ? '' : 's'}
+            Showing <span className="font-medium text-neutral-900">{filteredItems.length}</span> item{filteredItems.length === 1 ? '' : 's'}
           </div>
         </div>
 
-        {/* Category Pills */}
+        {/* Category Pills (Events, Special Dishes, Offers, Limited Items) */}
         <div className="flex flex-wrap items-center gap-2">
           {CATEGORIES.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`text-xs px-3 py-1 rounded-md transition-colors ${
+              className={`text-xs px-3.5 py-1.5 rounded-md transition-colors ${
                 selectedCategory === category
                   ? 'border border-neutral-900 text-neutral-900 font-medium bg-neutral-50'
                   : 'text-neutral-500 hover:text-neutral-900 border border-transparent'
@@ -162,17 +162,36 @@ export default function SpecialsShowcase() {
       {/* Specials & Events Grid */}
       <section className="mb-24">
         {filteredItems.length === 0 ? (
-          <div className="py-20 text-center border border-dashed border-neutral-300 rounded-2xl bg-neutral-50">
-            <p className="text-neutral-500 text-sm">No specials currently matching this filter.</p>
-            <button
-              onClick={() => {
-                setSelectedVenue('All Venues');
-                setSelectedCategory('All Categories');
-              }}
-              className="mt-4 text-xs font-medium text-neutral-900 underline underline-offset-4"
-            >
-              Reset Filters
-            </button>
+          <div className="py-20 px-6 text-center border border-dashed border-neutral-300 rounded-2xl bg-neutral-50/60 max-w-2xl mx-auto space-y-4">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-neutral-100 text-neutral-400 mb-1 mx-auto">
+              <Sparkles className="w-5 h-5 text-amber-500" />
+            </div>
+            <h3 className="font-playfair text-xl sm:text-2xl font-normal text-neutral-900">
+              New Specials, Events &amp; Offers Dropping Soon
+            </h3>
+            <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed max-w-md mx-auto">
+              Our team is curating the upcoming live events, seasonal chef’s creations, exclusive offers, and limited-edition dishes. Check back shortly or connect with our concierge for today’s table bookings and off-menu specials.
+            </p>
+            <div className="pt-3 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="https://wa.me/917736030777?text=Hi%20District%207%2C%20I%20would%20like%20to%20inquire%20about%20today%27s%20specials%20and%20events."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium transition-colors"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>Inquire on WhatsApp</span>
+              </a>
+              <a
+                href="https://www.instagram.com/district7kochi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-medium transition-colors"
+              >
+                <span>Follow on Instagram</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

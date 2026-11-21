@@ -5,8 +5,8 @@ import SpecialsShowcase from '../../components/SpecialsShowcase';
 import { Sparkles } from 'lucide-react';
 
 export const metadata = {
-  title: 'Special Events & Chef’s Specials - District 7 Kochi',
-  description: 'Discover limited-edition culinary creations, seasonal specials, weekend popups, and exclusive tasting events across District 7 Encore, Restro Cafe, and Dulce Patisserie in Kochi.',
+  title: 'Special Events, Dishes & Offers - District 7 Kochi',
+  description: 'Discover events, seasonal chef specials, limited-time offers, and exclusive items across District 7 Encore, Restro Cafe, and Dulce Patisserie in Kochi.',
 };
 
 export default function SpecialsPage() {
@@ -21,7 +21,7 @@ export default function SpecialsPage() {
             {/* Background image */}
             <img
               src="/images/gallery/d7-ambient-dining-hall.jpg"
-              alt="District 7 Special Events and Culinary Creations"
+              alt="District 7 Special Events, Dishes and Offers"
               className="absolute inset-0 w-full h-full object-cover opacity-35 scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/60" />
@@ -31,14 +31,14 @@ export default function SpecialsPage() {
               <div className="inline-flex items-center space-x-2 border-y border-white/20 py-1 px-5 mb-2">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
                 <span className="text-[11px] uppercase tracking-[0.3em] text-neutral-300 font-light">
-                  Curated Gastronomy • Limited Editions
+                  Events • Specials • Offers • Limited Items
                 </span>
               </div>
               <h1 className="font-playfair text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
-                Special Events &amp; Chef’s Specials
+                Specials &amp; Events
               </h1>
               <p className="max-w-2xl mx-auto text-xs sm:text-sm text-neutral-300 font-light leading-relaxed">
-                Seasonal delicacies, weekend pop-ups, and signature chef creations crafted fresh across Kadavanthra &amp; Vyttila. Updated regularly with our latest culinary highlights.
+                Live events, seasonal chef’s creations, exclusive offers, and limited-edition drops across Kadavanthra &amp; Vyttila.
               </p>
             </div>
           </div>
